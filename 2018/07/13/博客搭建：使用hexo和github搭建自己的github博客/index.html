@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>shuangyangqian</title>
+  <title>博客搭建：使用hexo和github搭建自己的github博客 | shuangyangqian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="业精于勤，荒于嬉。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="shuangyangqian">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="使用hexo和github来搭建自己的github博客写这篇文章的原因： 自己在搭建博客的时候，查看了网上很多教程，其中99%的博客基本上都是一样的，课件文档的质量着实一般。按照其办法，基本不可能完全部署成功。经过深入研究和尝试。自己初步搭建好一套，并且将尝试过程中所研究出来的原理记录下来。 因为电脑使用的是公司的电脑，在搭建博客过程中所需要安装软件，还有自建hexo目录和修改对应的配置，怕日后换">
+<meta name="keywords" content="博客搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搭建：使用hexo和github搭建自己的github博客">
+<meta property="og:url" content="http://yoursite.com/2018/07/13/博客搭建：使用hexo和github搭建自己的github博客/index.html">
 <meta property="og:site_name" content="shuangyangqian">
-<meta property="og:description" content="业精于勤，荒于嬉。">
+<meta property="og:description" content="使用hexo和github来搭建自己的github博客写这篇文章的原因： 自己在搭建博客的时候，查看了网上很多教程，其中99%的博客基本上都是一样的，课件文档的质量着实一般。按照其办法，基本不可能完全部署成功。经过深入研究和尝试。自己初步搭建好一套，并且将尝试过程中所研究出来的原理记录下来。 因为电脑使用的是公司的电脑，在搭建博客过程中所需要安装软件，还有自建hexo目录和修改对应的配置，怕日后换">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-13T02:39:49.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shuangyangqian">
-<meta name="twitter:description" content="业精于勤，荒于嬉。">
+<meta name="twitter:title" content="博客搭建：使用hexo和github搭建自己的github博客">
+<meta name="twitter:description" content="使用hexo和github来搭建自己的github博客写这篇文章的原因： 自己在搭建博客的时候，查看了网上很多教程，其中99%的博客基本上都是一样的，课件文档的质量着实一般。按照其办法，基本不可能完全部署成功。经过深入研究和尝试。自己初步搭建好一套，并且将尝试过程中所研究出来的原理记录下来。 因为电脑使用的是公司的电脑，在搭建博客过程中所需要安装软件，还有自建hexo目录和修改对应的配置，怕日后换">
   
     <link rel="alternative" href="/atom.xml" title="shuangyangqian" type="application/atom+xml">
   
@@ -135,16 +137,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-博客搭建：使用hexo和github搭建自己的github博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-博客搭建：使用hexo和github搭建自己的github博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/13/博客搭建：使用hexo和github搭建自己的github博客/">博客搭建：使用hexo和github搭建自己的github博客</a>
+    <h1 class="article-title" itemprop="name">
+      博客搭建：使用hexo和github搭建自己的github博客
     </h1>
   
 
@@ -161,11 +161,81 @@
 <li>自己在搭建博客的时候，查看了网上很多教程，其中99%的博客基本上都是一样的，课件文档的质量着实一般。按照其办法，基本不可能完全部署成功。经过深入研究和尝试。自己初步搭建好一套，并且将尝试过程中所研究出来的原理记录下来。</li>
 <li>因为电脑使用的是公司的电脑，在搭建博客过程中所需要安装软件，还有自建hexo目录和修改对应的配置，怕日后换电脑，对相关操作遗忘，而造成不必要的麻烦，记录下来。</li>
 </ol>
-        
-          <a class="article-more-a" href="/2018/07/13/博客搭建：使用hexo和github搭建自己的github博客/#more">展开全文 >></a>
-        
+<a id="more"></a>
+<h3 id="0-准备条件"><a href="#0-准备条件" class="headerlink" title="0.准备条件"></a>0.准备条件</h3><p>1.申请github账号</p>
+<h3 id="1-安装nodejs和git"><a href="#1-安装nodejs和git" class="headerlink" title="1.安装nodejs和git"></a>1.安装nodejs和git</h3><p>这两个软件没啥可说的，自行百度或者google安装即可。需要注意的一点事nodejs安装的版本不能太低，记得当时是安装了4.x版本的nodejs导致后来出错，还排查了很长时间。因此建议安装较新的版本。</p>
+<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h3><h4 id="hexo是什么："><a href="#hexo是什么：" class="headerlink" title="hexo是什么："></a>hexo是什么：</h4><p>可以这么理解，hexo是一个可以帮助你完成博客搭建的一个工具。比如，你在本地写好一个md文件，hexo可以帮助你上传到github上去（具体上传到特定的github repo中，就是$username.github.io），然后渲染成好看的页面，最后通过http://$username.github.io就可以通过互联网来访问。</p>
+<p>当然，如果不借助hexo来搭建可不可以？当然可以，不过你需要自己上传md文件，自己编写css、html文件来进行渲染，有想法的老哥可以自己尝试着做一下。不过这没什么必要，术业有专攻，专注于自己领域本身的问题就可以，既然有现成的工具，为什么不用呢。</p>
+<p>当然除了hexo之外，还有很多其他的工具，比如jekyll。为什么选择hexo呢，因为刚开始俩都不熟悉，就学习了hexo，然后觉得hexo还不错，也没有学习jekyll了。工具嘛，有一个并且使用着方便就行。</p>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
+<p>等待一段时间，然后如果能得到以下结果，就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.17134 win32 x64</span><br><span class="line">http_parser: 2.7.0</span><br><span class="line">node: 8.10.0</span><br><span class="line">v8: 6.2.414.50</span><br><span class="line">uv: 1.19.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.10.1-DEV</span><br><span class="line">modules: 57</span><br><span class="line">nghttp2: 1.25.0</span><br><span class="line">openssl: 1.0.2n</span><br><span class="line">icu: 60.1</span><br><span class="line">unicode: 10.0</span><br><span class="line">cldr: 32.0</span><br><span class="line">tz: 2017c</span><br></pre></td></tr></table></figure>
+<p>目前软件安装的工作已经完成，下面开始建立本地博客仓库和github repo。</p>
+<h3 id="3-创建github-repo"><a href="#3-创建github-repo" class="headerlink" title="3.创建github repo"></a>3.创建github repo</h3><p>在github上创建名字为$username.github.io的仓库，名字一定要严格按照这个来。然后根据提示进行一些配置，就可以了。</p>
+<p>原理：为什么必须要严格按照这个名字来。这个是github为了方便开发者写博客，特意推出的一个功能，也就是每一个github账号只能创建一个对应这样特定名字的仓库，然后如果访问http://$username.github.io的话就会访问到该仓库里的一些文件，正如上面说的，如果不借助工具，就可以自己写html、css文件，上传到该仓库中。同样可以达到建站的目的。</p>
+<h3 id="4-创建本地hexo博客目录（重要）"><a href="#4-创建本地hexo博客目录（重要）" class="headerlink" title="4.创建本地hexo博客目录（重要）"></a>4.创建本地hexo博客目录（重要）</h3><p>这一步是你今后写的博客文件存放的目录，同样，如果相对博客进行一些定制化的改造，如使用主题等，也需要在该目录下进行配置的修改。</p>
+<h4 id="（1）创建hexo根目录。"><a href="#（1）创建hexo根目录。" class="headerlink" title="（1）创建hexo根目录。"></a>（1）创建hexo根目录。</h4><p>选择一个合适的位置，创建一个目录，我是在f:的根目录下创建的hexo目录。然后进入到该目录中执行hexo init，执行完不报错，查看该目录的目录结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ ll -ah</span><br><span class="line">total 261K</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  13 08:48 ./</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  12 19:16 ../</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  13 09:22 .deploy_git/</span><br><span class="line">-rw-r--r-- 1 user 197121   71 7月  12 19:17 .gitignore</span><br><span class="line">-rw-r--r-- 1 user 197121 2.3K 7月  13 08:48 _config.yml</span><br><span class="line">-rw-r--r-- 1 user 197121  174 7月  13 09:29 db.json</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  13 08:36 node_modules/</span><br><span class="line">-rw-r--r-- 1 user 197121  611 7月  13 08:36 package.json</span><br><span class="line">-rw-r--r-- 1 user 197121 135K 7月  13 08:36 package-lock.json</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  13 08:41 public/</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  12 19:17 scaffolds/</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  12 19:17 source/</span><br><span class="line">drwxr-xr-x 1 user 197121    0 7月  12 19:19 themes/</span><br></pre></td></tr></table></figure>
+<p>介绍几个目录的作用</p>
+<ul>
+<li>_config.yml  该文件是整个站点的配置文件，其中包括你的站点title、站点所关联的github仓库等等</li>
+<li>source 该目录存放着你创建的所有的博客的源文件，即md文件，当然如果有相关images同样也在该目录下。</li>
+<li>public 该目录存放着渲染好的一些js、css、html文件，可以供本地起server来实时查看。</li>
+<li>themes 存放着主题目录，安装了几个主题，该目录下就存放着几个目录</li>
+</ul>
+<p>进入到themes目录下查看：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">user@HT-20171109NHBX MINGW64 /f/projects/hexo/themes</span><br><span class="line">$ ls</span><br><span class="line">landscape/  yilia/</span><br><span class="line"></span><br><span class="line">user@HT-20171109NHBX MINGW64 /f/projects/hexo/themes</span><br><span class="line">$ cd yilia/</span><br><span class="line"></span><br><span class="line">user@HT-20171109NHBX MINGW64 /f/projects/hexo/themes/yilia (master)</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  languages/  layout/  package.json  README.md  source/  source-src/  webpack.config.js</span><br></pre></td></tr></table></figure>
+<p>上述可以看出我是安装了两个主题，我目前使用的是yilia，可以看到主题目录下也有_config.yml文件。这个配置文件可以对主题进行一些定制化修改。</p>
+<p>好了现在hexo 存放博客的目录已经完成。可以通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 680 ms</span><br><span class="line">INFO  Generated: content.json</span><br><span class="line">INFO  Generated: archives/2018/index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">INFO  Generated: archives/2018/07/index.html</span><br><span class="line">INFO  Generated: 2018/07/12/firstblog-md/index.html</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: tags/test/index.html</span><br><span class="line">INFO  Generated: fonts/default-skin.b257fa.svg</span><br><span class="line">INFO  Generated: fonts/iconfont.8c627f.woff</span><br><span class="line">INFO  Generated: fonts/iconfont.45d7ee.svg</span><br><span class="line">INFO  Generated: fonts/iconfont.16acc2.ttf</span><br><span class="line">INFO  Generated: fonts/iconfont.b322fa.eot</span><br><span class="line">INFO  Generated: img/default-skin.png</span><br><span class="line">INFO  Generated: fonts/tooltip.4004ff.svg</span><br><span class="line">INFO  Generated: img/scrollbar_arrow.png</span><br><span class="line">INFO  Generated: img/preloader.gif</span><br><span class="line">INFO  Generated: main.0cf68a.css</span><br><span class="line">INFO  Generated: slider.e37972.js</span><br><span class="line">INFO  Generated: main.0cf68a.js</span><br><span class="line">INFO  Generated: 2018/07/13/博客搭建：使用hexo和github搭建自己的github博客/index.html</span><br><span class="line">INFO  Generated: mobile.992cbe.js</span><br><span class="line">INFO  21 files generated in 197 ms</span><br></pre></td></tr></table></figure>
+<p>通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>来本地查看博客系统是什么样的。</p>
+<h3 id="5-本地hexo目录关联远程github仓库"><a href="#5-本地hexo目录关联远程github仓库" class="headerlink" title="5.本地hexo目录关联远程github仓库"></a>5.本地hexo目录关联远程github仓库</h3><p>上一步创建了本地的博客编写目录。还可以生成静态文件供本地预览等。那么写好的博客如何上传到github上。</p>
+<p>配置相关的配置文件，打开hexo根目录下的_config.yml文件（注意，是hexo根目录的，不是主题的），在最后deploy模块处进行如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">    repository: git@github.com:shuangyangqian/shuangyangqian.github.io.git</span><br><span class="line">      branch: master</span><br></pre></td></tr></table></figure>
+<pre><code>仔细查看该配置文件，可以看到我们可以配置很多东西：
+
+* title
+* description
+* author
+* theme
+* ...
+
+因为可以配置的实在太多了，贴上一份自己初步配置的，供参考：
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">   $ cat _config.yml</span><br><span class="line">   # Hexo Configuration</span><br><span class="line">   ## Docs: https://hexo.io/docs/configuration.html</span><br><span class="line">   ## Source: https://github.com/hexojs/hexo/</span><br><span class="line"></span><br><span class="line">   # Site</span><br><span class="line">   title: shuangyangqian</span><br><span class="line">   subtitle:</span><br><span class="line">   description: 业精于勤，荒于嬉。</span><br><span class="line">   keywords:</span><br><span class="line">   author: shuangyangqian</span><br><span class="line">   language:</span><br><span class="line">   timezone:</span><br><span class="line"></span><br><span class="line">   # URL</span><br><span class="line">   ## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">   url: http://yoursite.com</span><br><span class="line">   root: /</span><br><span class="line">   permalink: :year/:month/:day/:title/</span><br><span class="line">   permalink_defaults:</span><br><span class="line"></span><br><span class="line">   # Directory</span><br><span class="line">   source_dir: source</span><br><span class="line">   public_dir: public</span><br><span class="line">   tag_dir: tags</span><br><span class="line">   archive_dir: archives</span><br><span class="line">   category_dir: categories</span><br><span class="line">   code_dir: downloads/code</span><br><span class="line">   i18n_dir: :lang</span><br><span class="line">   skip_render:</span><br><span class="line"></span><br><span class="line">   # Writing</span><br><span class="line">   new_post_name: :title.md # File name of new posts</span><br><span class="line">   default_layout: post</span><br><span class="line">   titlecase: false # Transform title into titlecase</span><br><span class="line">   external_link: true # Open external links in new tab</span><br><span class="line">   filename_case: 0</span><br><span class="line">   render_drafts: false</span><br><span class="line">   post_asset_folder: false</span><br><span class="line">   relative_link: false</span><br><span class="line">   future: true</span><br><span class="line">   highlight:</span><br><span class="line">     enable: true</span><br><span class="line">line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">    tab_replace:</span><br><span class="line"></span><br><span class="line">    # Home page setting</span><br><span class="line">    # path: Root path for your blogs index page. (default = &apos;&apos;)</span><br><span class="line">    # per_page: Posts displayed per page. (0 = disable pagination)</span><br><span class="line">    # order_by: Posts order. (Order by date descending by default)</span><br><span class="line">    index_generator:</span><br><span class="line">      path: &apos;&apos;</span><br><span class="line"> per_page: 10</span><br><span class="line">   order_by: -date</span><br><span class="line"></span><br><span class="line">   # Category &amp; Tag</span><br><span class="line">   default_category: uncategorized</span><br><span class="line">   category_map:</span><br><span class="line">   tag_map:</span><br><span class="line"></span><br><span class="line">   # Date / Time format</span><br><span class="line">   ## Hexo uses Moment.js to parse and display date</span><br><span class="line">   ## You can customize the date format as defined in</span><br><span class="line">   ## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">   date_format: YYYY-MM-DD</span><br><span class="line">   time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line">   # Pagination</span><br><span class="line">   ## Set per_page to 0 to disable pagination</span><br><span class="line">   per_page: 10</span><br><span class="line">   pagination_dir: page</span><br><span class="line"></span><br><span class="line">   # Extensions</span><br><span class="line">   ## Plugins: https://hexo.io/plugins/</span><br><span class="line">   ## Themes: https://hexo.io/themes/</span><br><span class="line">   theme: yilia</span><br><span class="line"></span><br><span class="line">   # Deployment</span><br><span class="line">   ## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">   deploy:</span><br><span class="line">     type: git</span><br><span class="line">       repository: git@github.com:shuangyangqian/shuangyangqian.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  jsonContent:</span><br><span class="line">      meta: false</span><br><span class="line">                    pages: false</span><br><span class="line">      posts:</span><br><span class="line">               title: true</span><br><span class="line">               date: true</span><br><span class="line">               path: true</span><br><span class="line">        text: false</span><br><span class="line">        raw: false</span><br><span class="line">        content: false</span><br><span class="line">        slug: false</span><br><span class="line">        updated: false</span><br><span class="line">        comments: false</span><br><span class="line">        link: false</span><br><span class="line">        permalink: false</span><br><span class="line">        excerpt: false</span><br><span class="line">        categories: false</span><br><span class="line">        tags: true</span><br></pre></td></tr></table></figure>
+</code></pre><p>关联github仓库的配置主要就是deploy那一部分，一定要填写自己github中名字的$username.github.io的仓库。</p>
+<p>上述配置完成之后，执行如下发布博客。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># hexo g //生成静态文件</span><br><span class="line"># hexo d //部署博客，主要是上传到github上</span><br></pre></td></tr></table></figure>
+<p>上述两条命令也可以合成一条</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># hexo d -g</span><br></pre></td></tr></table></figure>
+<p>如果没出什么错误，就会提示成功commit等信息。这时候你去github仓库中发现，多了一个commit。<br>停大概十几分钟，访问http://$username.github.io就可以看到自己的博客了。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -185,16 +255,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/13/博客搭建：使用hexo和github搭建自己的github博客/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/13/博客搭建：使用hexo和github搭建自己的github博客/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/12/firstblog-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">firstblog.md</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -209,87 +338,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-firstblog-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/firstblog-md/">firstblog.md</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/12/firstblog-md/" class="archive-article-date">
-  	<time datetime="2018-07-12T11:28:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>first blog(<em>_</em>).</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/firstblog-md/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用hexo和github来搭建自己的github博客"><span class="toc-number">1.</span> <span class="toc-text">使用hexo和github来搭建自己的github博客</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#写这篇文章的原因："><span class="toc-number">1.0.0.1.</span> <span class="toc-text">写这篇文章的原因：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0-准备条件"><span class="toc-number">1.0.1.</span> <span class="toc-text">0.准备条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装nodejs和git"><span class="toc-number">1.0.2.</span> <span class="toc-text">1.安装nodejs和git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装hexo"><span class="toc-number">1.0.3.</span> <span class="toc-text">2.安装hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo是什么："><span class="toc-number">1.0.3.1.</span> <span class="toc-text">hexo是什么：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装hexo"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">安装hexo</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建github-repo"><span class="toc-number">1.0.4.</span> <span class="toc-text">3.创建github repo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-创建本地hexo博客目录（重要）"><span class="toc-number">1.0.5.</span> <span class="toc-text">4.创建本地hexo博客目录（重要）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）创建hexo根目录。"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">（1）创建hexo根目录。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-本地hexo目录关联远程github仓库"><span class="toc-number">1.0.6.</span> <span class="toc-text">5.本地hexo目录关联远程github仓库</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -312,8 +386,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
